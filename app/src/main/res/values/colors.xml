@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="status_bar_color">#222222</color>
+    <color name="text_hint_color">#222222</color>
+
+    <color name="item_layout_background">#1B1B1B</color>
+    <color name="item_tvsymbols_text_color">#EAEA01</color>
+    <color name="item_tvlastupdate_text_color">#80D8FF</color>
+
+    <color name="main_background_color">#222222</color>
+
+    <color name="textColor_activity_coin_detail_information">#80D8FF</color>
+    <color name="textColor_activity_coin_detail_tvMaxPrice">#4CFF00</color>
+    <color name="textColor_activity_coin_detail_tvMinPrice">#FF0000</color>
+
+    <color name="line_view_color_activity_coin_detail">#7A7A7A</color>
+    <color name="tvToSymbol_textcolor_activity_coin_detail">#B9F6CA</color>
+    <color name="tvFromSymbol_textcolor_activity_coin_detail">#EA80FC</color>
 </resources>
