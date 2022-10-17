@@ -1,16 +1,14 @@
-package com.example.cryptoapp.pojo
+package com.example.cryptoapp.data.network.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.cryptoapp.api.ApiFactory.BASE_IMAGE_URL
-import com.example.cryptoapp.utils.convertTimestampToTime
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import java.math.BigDecimal
 
 
 @Entity(tableName = "full_price_list")
-data class CoinPriceInfo(
+data class CoinInfoDto(
     @SerializedName("TYPE")
     @Expose
     val type: String? = null,
@@ -85,38 +83,5 @@ data class CoinPriceInfo(
     @SerializedName("LOW24HOUR")
     @Expose
     val low24hour: Double? = null
+)
 
-) {
-    fun getFormattedTime(): String {
-        return convertTimestampToTime(lastupdate)
-    }
-
-    fun getFullImageUrl(): String {
-        return BASE_IMAGE_URL + imageurl
-    }
-
-    fun getDayDifferenceCoin(): String {
-        if (highday != null && lowday != null) {
-            return (BigDecimal.valueOf(highday).subtract(BigDecimal.valueOf(lowday))).toString()
-        } else {
-            return "-"
-        }
-    }
-
-    fun getDayDifferenceInPer(): String {
-        val priceDouble = price?.toDouble()
-        val hundredPer = 100.0
-
-        if (priceDouble != null && openday != null) {
-
-            return ((BigDecimal.valueOf(priceDouble)
-                .subtract(BigDecimal.valueOf(openday)) * BigDecimal.valueOf(hundredPer)) / BigDecimal.valueOf(
-                openday
-            )).toString()
-        } else {
-            return "-"
-        }
-    }
-
-
-}

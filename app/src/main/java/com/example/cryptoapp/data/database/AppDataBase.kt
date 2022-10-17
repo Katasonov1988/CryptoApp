@@ -1,12 +1,11 @@
-package com.example.cryptoapp.database
+package com.example.cryptoapp.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.cryptoapp.pojo.CoinPriceInfo
 
-@Database(entities = [CoinPriceInfo::class], version = 1, exportSchema = false)
+@Database(entities = [CoinInfoDBModel::class], version = 2, exportSchema = false)
 abstract class AppDataBase : RoomDatabase() {
     companion object {
         @Volatile
@@ -23,7 +22,7 @@ abstract class AppDataBase : RoomDatabase() {
                         AppDataBase::class.java,
                         DB_NAME
                     )
-//                        .fallbackToDestructiveMigration()
+                        .fallbackToDestructiveMigration()
                         .build()
                     db = instance
                 }
@@ -32,7 +31,7 @@ abstract class AppDataBase : RoomDatabase() {
         }
     }
 
-    abstract fun coinPriceInfoDao(): CoinPriceInfoDao
+    abstract fun coinInfoDao(): CoinInfoDao
 
 }
 

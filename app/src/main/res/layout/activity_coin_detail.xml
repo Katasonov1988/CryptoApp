@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_background_color"
     android:paddingTop="@dimen/coordinatorlayout_paddingtop_layout_height_coin_detail_activity"
-    tools:context=".activities.CoinDetailActivity">
+    tools:context=".presentation.CoinDetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
