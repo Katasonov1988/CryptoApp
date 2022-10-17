@@ -18,7 +18,7 @@
         android:padding="@dimen/constraintlayout_padding_layout_height_coin_detail_activity">
 
         <ImageView
-            android:id="@+id/ivLogoCoinDetailActivity"
+            android:id="@+id/ivLogoCoin"
             android:layout_width="@dimen/ivlogocoindetailactivity_layout_width_coin_detail_activity"
             android:layout_height="@dimen/ivlogocoindetailactivity_layout_height_coin_detail_activity"
             android:contentDescription="@string/сoin_image"
@@ -49,7 +49,7 @@
             android:textSize="@dimen/textsize_header_coin_detail_activity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivLogoCoinDetailActivity" />
+            app:layout_constraintTop_toBottomOf="@id/ivLogoCoin" />
 
         <TextView
             android:id="@+id/tvToSymbol"

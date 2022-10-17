@@ -6,13 +6,11 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.cryptoapp.R
-import com.example.cryptoapp.data.network.model.CoinInfoDto
 import com.example.cryptoapp.databinding.ActivityCoinPriceListBinding
 import com.example.cryptoapp.domain.CoinInfo
+import com.example.cryptoapp.presentation.adapters.CoinInfoAdapter
 
 // https://min-api.cryptocompare.com/documentation?key=Price&cat=multipleSymbolsFullPriceEndpoint
 class CoinPriceListActivity : AppCompatActivity() {

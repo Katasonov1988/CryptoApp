@@ -23,12 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/rv_coin_price_list_layout_height"
         android:focusableInTouchMode="true"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
         app:layout_constraintTop_toBottomOf="@id/my_toolbar"
 
+        app:layout_constraintVertical_bias="0.0"
+        app:spanCount="3"
         tools:listitem="@layout/item_coin_ifo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
