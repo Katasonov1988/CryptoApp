@@ -33,6 +33,6 @@
     <dimen name="ivlogocoindetailactivity_layout_height_coin_detail_activity">50dp</dimen>
     <dimen name="constraintlayout_padding_layout_height_coin_detail_activity">16dp</dimen>
     <dimen name="constraintlayout_margin_layout_height_coin_detail_activity">4dp</dimen>
-    <dimen name="coordinatorlayout_paddingtop_layout_height_coin_detail_activity">16dp</dimen>
+    <dimen name="coordinatorlayout_paddingtop_layout_height_coin_detail_activity">32dp</dimen>
 
 </resources>
