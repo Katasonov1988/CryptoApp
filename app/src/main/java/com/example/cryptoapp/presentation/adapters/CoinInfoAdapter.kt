@@ -4,23 +4,21 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.example.cryptoapp.R
 import com.example.cryptoapp.databinding.ItemCoinIfoBinding
 import com.example.cryptoapp.domain.CoinInfo
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.item_coin_ifo.view.*
 
 class CoinInfoAdapter(
     private val context: Context
-) :
-    ListAdapter<CoinInfo, CoinInfoViewHolder>(CoinInfoDiffCallback) {
+) : ListAdapter<CoinInfo, CoinInfoViewHolder>(CoinInfoDiffCallback) {
 
     var onCoinClickListener: OnCoinClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinInfoViewHolder {
         val binding = ItemCoinIfoBinding.inflate(
-            LayoutInflater.from(parent.context), parent,
+            LayoutInflater.from(parent.context),
+            parent,
             false
         )
         return CoinInfoViewHolder(binding)
@@ -32,20 +30,19 @@ class CoinInfoAdapter(
             with(coin) {
                 val symbolsTemplate = context.resources.getString(R.string.symbols_template)
                 val lastUpdateTemplate = context.resources.getString(R.string.last_update_template)
-                tvSymbols.text = fromsymbol
+                tvSymbols.text = String.format(symbolsTemplate, fromSymbol, toSymbol)
                 tvPrice.text = price?.let {
-                    String.format(symbolsTemplate, it.take(10), tosymbol)
+                    String.format(symbolsTemplate, it.take(10), toSymbol)
                 }
                 root.setOnClickListener {
                     onCoinClickListener?.onCoinClick(this)
                 }
 
                 tvLastUpdate.text = String.format(
-                    lastUpdateTemplate, lastupdate
+                    lastUpdateTemplate, lastUpdate
                 )
-                Picasso.get().load(imageurl).into(root.ivLogoCoin)
+                Picasso.get().load(imageUrl).into(ivLogoCoin)
             }
-
         }
     }
 

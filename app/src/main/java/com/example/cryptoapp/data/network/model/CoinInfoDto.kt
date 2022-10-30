@@ -4,84 +4,83 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import java.math.BigDecimal
 
 
 @Entity(tableName = "full_price_list")
 data class CoinInfoDto(
     @SerializedName("TYPE")
     @Expose
-    val type: String? = null,
+    val type: String?,
 
     @SerializedName("MARKET")
     @Expose
-    val market: String? = null,
+    val market: String?,
 
     @PrimaryKey
     @SerializedName("FROMSYMBOL")
     @Expose
-    val fromsymbol: String,
+    val fromSymbol: String,
 
     @SerializedName("TOSYMBOL")
     @Expose
-    val tosymbol: String? = null,
+    val toSymbol: String?,
 
     @SerializedName("PRICE")
     @Expose
-    val price: String? = null,
+    val price: String?,
 
     @SerializedName("LASTUPDATE")
     @Expose
-    val lastupdate: Long? = null,
+    val lastUpdate: Long?,
 
     @SerializedName("HIGHDAY")
     @Expose
-    val highday: Double? = null,
+    val highDay: Double?,
 
     @SerializedName("LOWDAY")
     @Expose
-    val lowday: Double? = null,
+    val lowDay: Double?,
 
 
     @SerializedName("LASTMARKET")
     @Expose
-    val lastmarket: String? = null,
+    val lastMarket: String?,
 
 
     @SerializedName("IMAGEURL")
     @Expose
-    val imageurl: String? = null,
+    val imageUrl: String?,
 
     @SerializedName("VOLUMEDAY")
     @Expose
-    val volumeday: Double? = null,
+    val volumeDay: Double?,
 
     @SerializedName("VOLUMEDAYTO")
     @Expose
-    val volumedayto: Double? = null,
+    val volumeDayTo: Double?,
 
     @SerializedName("VOLUME24HOUR")
     @Expose
-    val volume24hour: Double? = null,
+    val volume24Hour: Double?,
 
     @SerializedName("VOLUME24HOURTO")
     @Expose
-    val volume24hourto: Double? = null,
+    val volume24HourTo: Double?,
 
     @SerializedName("OPENDAY")
     @Expose
-    val openday: Double? = null,
+    val openDay: Double?,
 
     @SerializedName("OPEN24HOUR")
     @Expose
-    val open24hour: Double? = null,
+    val open24Hour: Double?,
 
     @SerializedName("HIGH24HOUR")
     @Expose
-    val high24hour: Double? = null,
+    val high24Hour: Double?,
 
     @SerializedName("LOW24HOUR")
     @Expose
-    val low24hour: Double? = null
+    val low24Hour: Double?
 )
 

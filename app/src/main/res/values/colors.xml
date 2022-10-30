@@ -21,6 +21,6 @@
     <color name="textColor_activity_coin_detail_tvMinPrice">#FF0000</color>
 
     <color name="line_view_color_activity_coin_detail">#7A7A7A</color>
-    <color name="tvToSymbol_textcolor_activity_coin_detail">#B9F6CA</color>
-    <color name="tvFromSymbol_textcolor_activity_coin_detail">#EA80FC</color>
+    <color name="tv_to_symbol_text_color_activity_coin_detail">#B9F6CA</color>
+    <color name="tv_from_symbol_text_color_activity_coin_detail">#EA80FC</color>
 </resources>

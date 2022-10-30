@@ -9,16 +9,15 @@ import androidx.room.Query
 @Dao
 interface CoinInfoDao {
 
-    @Query("SELECT * FROM full_price_list ORDER BY lastupdate")
-    fun getPriceList(): LiveData<List<CoinInfoDBModel>>
+    @Query("SELECT * FROM full_price_list ORDER BY lastUpdate")
+    fun getPriceList(): LiveData<List<CoinInfoDbModel>>
 
     @Query("SELECT * FROM full_price_list WHERE fromSymbol == :fSym LIMIT 1")
-    fun getPriceInfoAboutCoin(fSym: String): LiveData<CoinInfoDBModel>
+    fun getPriceInfoAboutCoin(fSym: String): LiveData<CoinInfoDbModel>
 
-    @Query("SELECT * FROM full_price_list WHERE fromsymbol LIKE '%' || :searchQuery || '%'")
-    fun getDateFromQuery(searchQuery: String): LiveData<List<CoinInfoDBModel>>
-
+//    @Query("SELECT * FROM full_price_list WHERE fromsymbol LIKE '%' || :searchQuery || '%'")
+//    fun getDateFromQuery(searchQuery: String): LiveData<List<CoinInfoDBModel>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPriceList(priceList: List<CoinInfoDBModel>)
+    suspend fun insertPriceList(priceList: List<CoinInfoDbModel>)
 }

@@ -5,34 +5,32 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [CoinInfoDBModel::class], version = 2, exportSchema = false)
-abstract class AppDataBase : RoomDatabase() {
+@Database(entities = [CoinInfoDbModel::class], version = 1, exportSchema = false)
+abstract class AppDatabase : RoomDatabase() {
     companion object {
-        @Volatile
-        private var db: AppDataBase? = null
+
+        private var db: AppDatabase? = null
         private const val DB_NAME = "main.db"
         private val LOCK = Any()
 
-        fun getInstance(context: Context): AppDataBase {
+        fun getInstance(context: Context): AppDatabase {
             synchronized(LOCK) {
-                var instance = db
-                if (instance == null) {
-                    instance = Room.databaseBuilder(
+                db?.let { return it }
+                val instance =
+                    Room.databaseBuilder(
                         context,
-                        AppDataBase::class.java,
+                        AppDatabase::class.java,
                         DB_NAME
                     )
                         .fallbackToDestructiveMigration()
                         .build()
-                    db = instance
-                }
+                db = instance
                 return instance
             }
         }
     }
 
-    abstract fun coinInfoDao(): CoinInfoDao
-
+    abstract fun coinPriceInfoDao(): CoinInfoDao
 }
 
 

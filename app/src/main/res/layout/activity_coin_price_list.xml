@@ -6,31 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/main_background_color"
     tools:context=".presentation.CoinPriceListActivity">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/item_layout_background"
-        android:elevation="@dimen/my_toolbar_elevation"
-        android:theme="@style/ToolbarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/rvCoinPriceList"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/rv_coin_price_list_layout_height"
-        android:focusableInTouchMode="true"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
-
-        app:layout_constraintVertical_bias="0.0"
         app:spanCount="3"
         tools:listitem="@layout/item_coin_ifo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

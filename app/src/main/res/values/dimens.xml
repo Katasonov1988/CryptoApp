@@ -34,5 +34,9 @@
     <dimen name="constraintlayout_padding_layout_height_coin_detail_activity">16dp</dimen>
     <dimen name="constraintlayout_margin_layout_height_coin_detail_activity">4dp</dimen>
     <dimen name="coordinatorlayout_paddingtop_layout_height_coin_detail_activity">32dp</dimen>
+    <dimen name="margin_top_of_tv_fragment_coin_detail">16dp</dimen>
+    <dimen name="padding_start_of_tv_fragment_coin_detail">8dp</dimen>
+    <dimen name="padding_end_of_tv_fragment_coin_detail">8dp</dimen>
+    <dimen name="margin_start_of_tv_fragment_coin_detail">8dp</dimen>
 
 </resources>
