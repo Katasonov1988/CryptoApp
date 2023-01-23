@@ -1,6 +1,7 @@
 package com.example.cryptoapp.presentation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,6 +44,7 @@ class CoinDetailFragment : Fragment() {
                 tvFromSymbol.text = it.fromSymbol
                 tvToSymbol.text = it.toSymbol
                 Picasso.get().load(it.imageUrl).into(ivLogoCoin)
+                Log.v("Main Activity", it.imageUrl.toString())
 
                 tvMaxDifference.text =
                     (if (it.highDay != null && it.lowDay != null) {

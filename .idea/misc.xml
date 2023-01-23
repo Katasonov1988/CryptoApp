@@ -10,7 +10,7 @@
         <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/layout/activity_coin_price_list.xml" value="0.25" />
         <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/layout/fragment_coin_detail.xml" value="0.33" />
-        <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/layout/item_coin_ifo.xml" value="0.1" />
+        <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/layout/item_coin_ifo.xml" value="0.33" />
         <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/layout/share_dialog_fragment.xml" value="0.33" />
         <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/menu/bottom_app_bar_detail_coin_activity.xml" value="0.1" />
         <entry key="..\:/Android_studio_project/CryptoApp/app/src/main/res/menu/search_menu.xml" value="0.14722222222222223" />
@@ -18,7 +18,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

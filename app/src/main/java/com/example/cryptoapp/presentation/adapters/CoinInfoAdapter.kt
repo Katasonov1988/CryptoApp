@@ -30,7 +30,7 @@ class CoinInfoAdapter(
             with(coin) {
                 val symbolsTemplate = context.resources.getString(R.string.symbols_template)
                 val lastUpdateTemplate = context.resources.getString(R.string.last_update_template)
-                tvSymbols.text = String.format(symbolsTemplate, fromSymbol, toSymbol)
+                tvSymbols.text = String.format(fromSymbol)
                 tvPrice.text = price?.let {
                     String.format(symbolsTemplate, it.take(10), toSymbol)
                 }

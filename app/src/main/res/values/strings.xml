@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CryptoApp</string>
+    <string name="app_name">Мамкин майнер</string>
     <string name="save">Сохранить</string>
     <string name="enter_text">Введите текст</string>
     <string name="symbols_template">%s %s</string>
@@ -20,5 +20,6 @@
     <string name="enter_сurrency">Введите криптовалюту</string>
     <string name="share">Поделиться</string>
     <string name="coin">Coin</string>
+    <string name="write_header">Введите заголовок</string>
 
 </resources>

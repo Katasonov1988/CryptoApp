@@ -1,6 +1,7 @@
 package com.example.cryptoapp.presentation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,8 +26,6 @@ class CoinPriceListActivity : AppCompatActivity() {
 //        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val adapter = CoinInfoAdapter(this)
-        binding.rvCoinPriceList.layoutManager = GridLayoutManager(this, 3)
-
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
             override fun onCoinClick(coinPriceInfo: CoinInfo) {
                 if (isOnePaneMode()) {

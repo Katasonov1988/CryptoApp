@@ -6,6 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
+//    https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=USD
 
     @GET("top/totalvolfull")
     suspend fun getTopCoinsInfo(
