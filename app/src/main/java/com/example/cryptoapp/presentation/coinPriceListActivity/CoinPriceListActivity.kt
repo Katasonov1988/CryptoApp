@@ -1,14 +1,14 @@
-package com.example.cryptoapp.presentation
+package com.example.cryptoapp.presentation.coinPriceListActivity
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.cryptoapp.R
 import com.example.cryptoapp.databinding.ActivityCoinPriceListBinding
 import com.example.cryptoapp.domain.CoinInfo
-import com.example.cryptoapp.presentation.adapters.CoinInfoAdapter
+import com.example.cryptoapp.presentation.coinPriceListActivity.list.CoinInfoAdapter
+import com.example.cryptoapp.presentation.coinDetailActivity.CoinDetailActivity
+import com.example.cryptoapp.presentation.coinDetailActivity.CoinDetailFragment
 
 // https://min-api.cryptocompare.com/documentation?key=Price&cat=multipleSymbolsFullPriceEndpoint
 class CoinPriceListActivity : AppCompatActivity() {
@@ -22,8 +22,6 @@ class CoinPriceListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-//        setSupportActionBar(binding.myToolbar)
-//        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val adapter = CoinInfoAdapter(this)
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {

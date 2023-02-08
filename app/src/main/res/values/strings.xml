@@ -13,7 +13,7 @@
     <string name="updated">Обновлено:</string>
     <string name="last_market">Последняя сделка:</string>
     <string name="difference_in_percent">За последние 24 часа, %:</string>
-    <string name="max_price">Колебание за день:</string>
+    <string name="max_price">Качели:</string>
     <string name="min_price_for_day">Максимум за день:</string>
     <string name="сoin_image">Значек криптовалюты</string>
     <string name="search">Поиск по названию валюты</string>

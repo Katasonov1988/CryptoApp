@@ -2,9 +2,9 @@ package com.example.cryptoapp.data.mapper
 
 import android.icu.util.TimeZone
 import com.example.cryptoapp.data.database.CoinInfoDbModel
-import com.example.cryptoapp.data.network.model.CoinInfoDto
-import com.example.cryptoapp.data.network.model.CoinInfoJsonContainerDto
-import com.example.cryptoapp.data.network.model.CoinNamesListDto
+import com.example.cryptoapp.data.network.model.CoinInfoData
+import com.example.cryptoapp.data.network.model.CoinInfoJsonContainerData
+import com.example.cryptoapp.data.network.model.CoinNamesListData
 import com.example.cryptoapp.domain.CoinInfo
 import com.google.gson.Gson
 import java.sql.Timestamp
@@ -12,7 +12,11 @@ import android.icu.text.SimpleDateFormat
 import java.util.*
 
 class CoinMapper {
-    fun mapDtoToDbModel(dto: CoinInfoDto) = CoinInfoDbModel(
+    companion object {
+        const val BASE_IMAGE_URL = "https://cryptocompare.com"
+    }
+
+    fun mapDtoToDbModel(dto: CoinInfoData) = CoinInfoDbModel(
         fromSymbol = dto.fromSymbol,
         toSymbol = dto.toSymbol,
         price = dto.price,
@@ -24,8 +28,8 @@ class CoinMapper {
         openDay = dto.openDay
     )
 
-    fun mapJsonContainerToListCoinInfo(jsonContainer: CoinInfoJsonContainerDto): List<CoinInfoDto> {
-        val result = mutableListOf<CoinInfoDto>()
+    fun mapJsonContainerToListCoinInfo(jsonContainer: CoinInfoJsonContainerData): List<CoinInfoData> {
+        val result = mutableListOf<CoinInfoData>()
         val jsonObject = jsonContainer.json ?: return result
         val coinKeySet = jsonObject.keySet()
         for (coinKey in coinKeySet) {
@@ -34,7 +38,7 @@ class CoinMapper {
             for (currencyKey in currencyKeySet) {
                 val priceInfo = Gson().fromJson(
                     currencyJson.getAsJsonObject(currencyKey),
-                    CoinInfoDto::class.java
+                    CoinInfoData::class.java
                 )
                 result.add(priceInfo)
             }
@@ -42,7 +46,7 @@ class CoinMapper {
         return result
     }
 
-    fun mapNamesListToString(namesListDto: CoinNamesListDto): String {
+    fun mapNamesListToString(namesListDto: CoinNamesListData): String {
         return namesListDto.names?.map {
             it.coinName?.name
         }?.joinToString(",") ?: ""
@@ -71,7 +75,4 @@ class CoinMapper {
         return sdf.format(date)
     }
 
-    companion object {
-        const val BASE_IMAGE_URL = "https://cryptocompare.com"
-    }
 }

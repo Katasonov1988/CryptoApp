@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/coordinatorlayout_paddingtop_layout_height_coin_detail_activity"
-        tools:context=".presentation.CoinDetailActivity">
+        tools:context=".presentation.coinDetailActivity.CoinDetailActivity">
 
         <ImageView
             android:id="@+id/ivLogoCoin"

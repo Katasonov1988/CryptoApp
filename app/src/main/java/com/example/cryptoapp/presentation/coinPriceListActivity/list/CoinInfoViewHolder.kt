@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.adapters
+package com.example.cryptoapp.presentation.coinPriceListActivity.list
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cryptoapp.databinding.ItemCoinIfoBinding

@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.adapters
+package com.example.cryptoapp.presentation.coinPriceListActivity.list
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -31,6 +31,8 @@ class CoinInfoAdapter(
                 val symbolsTemplate = context.resources.getString(R.string.symbols_template)
                 val lastUpdateTemplate = context.resources.getString(R.string.last_update_template)
                 tvSymbols.text = String.format(fromSymbol)
+                tvLastUpdate.text = String.format(lastUpdateTemplate, lastUpdate)
+                Picasso.get().load(imageUrl).into(ivLogoCoin)
                 tvPrice.text = price?.let {
                     String.format(symbolsTemplate, it.take(10), toSymbol)
                 }
@@ -38,14 +40,9 @@ class CoinInfoAdapter(
                     onCoinClickListener?.onCoinClick(this)
                 }
 
-                tvLastUpdate.text = String.format(
-                    lastUpdateTemplate, lastUpdate
-                )
-                Picasso.get().load(imageUrl).into(ivLogoCoin)
             }
         }
     }
-
     interface OnCoinClickListener {
         fun onCoinClick(coinPriceInfo: CoinInfo)
     }

@@ -1,8 +1,6 @@
-package com.example.cryptoapp.presentation
+package com.example.cryptoapp.presentation.coinDetailActivity
 
-import android.graphics.Color
 import android.os.Bundle
-import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.cryptoapp.databinding.FragmentCoinDetailBinding
+import com.example.cryptoapp.presentation.coinPriceListActivity.CoinViewModel
 import com.squareup.picasso.Picasso
 import java.math.BigDecimal
 
