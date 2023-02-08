@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/main_background_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -42,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margintop_header_coin_detail_activity"
             android:text="@string/slash"
-            android:textColor="@color/white"
             android:textSize="@dimen/textsize_header_coin_detail_activity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,9 +81,11 @@
             tools:text="7352,5" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,9 +115,11 @@
             tools:text="6789,5" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -148,9 +149,11 @@
             tools:text="6789,5" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginStart="@dimen/line_view_layout_margin_top_coin_detail_activity"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -180,9 +183,11 @@
             tools:text="0000,5" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -212,9 +217,11 @@
             tools:text="5%" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -244,9 +251,11 @@
             tools:text="6789,5" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -276,9 +285,11 @@
             tools:text="21:33:44" />
 
         <View
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/line_view_height_coin_detail_activity"
             android:layout_marginTop="@dimen/line_view_layout_margin_top_coin_detail_activity"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:background="@color/line_view_color_activity_coin_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

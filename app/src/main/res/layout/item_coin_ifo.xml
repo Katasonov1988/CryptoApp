@@ -4,20 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/black"
     app:cardElevation="@dimen/card_view_elevation"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/item_layout_background">
+        android:padding="@dimen/padding">
 
         <ImageView
             android:id="@+id/ivLogoCoin"
             android:layout_width="@dimen/item_imageview_width"
             android:layout_height="@dimen/item_imageview_height"
-            android:layout_margin="@dimen/item_imageview_margin"
             android:contentDescription="@string/coin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,9 +25,6 @@
             android:id="@+id/tvSymbols"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="@dimen/item_textview_tvsymbols_padding_start"
-            android:paddingTop="@dimen/item_textview_tvsymbols_padding_top"
-            android:paddingEnd="@dimen/item_textview_tvsymbols_padding_end"
             android:textColor="@color/item_tvsymbols_text_color"
             android:textSize="@dimen/item_textview_tvsymbols_text_size"
             app:layout_constraintBottom_toTopOf="@id/tvPrice"
@@ -42,8 +37,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/item_textview_tvprice_padding_top"
-            android:paddingEnd="@dimen/item_textview_tvprice_padding_end"
-            android:textColor="@color/white"
             android:textSize="@dimen/item_textview_tvprice_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvLastUpdate"
@@ -56,10 +49,9 @@
             android:id="@+id/tvLastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/item_textview_tvlastupdate_margin_start"
-            android:padding="@dimen/item_textview_tvlastupdate_padding"
-            android:textColor="@color/item_tvlastupdate_text_color"
-            android:textSize="@dimen/item_textview_tvlastupdate_text_size"
+            android:paddingTop="@dimen/item_textview_tvprice_padding_top"
+            android:textColor="@color/light_blue_color"
+            android:textSize="@dimen/item_textview_tv_lastupdate_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPrice"

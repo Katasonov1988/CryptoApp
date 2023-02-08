@@ -1,6 +1,8 @@
 package com.example.cryptoapp.presentation
 
+import android.graphics.Color
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +12,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.cryptoapp.databinding.FragmentCoinDetailBinding
 import com.squareup.picasso.Picasso
-import java.lang.RuntimeException
 import java.math.BigDecimal
 
 class CoinDetailFragment : Fragment() {
@@ -43,6 +44,8 @@ class CoinDetailFragment : Fragment() {
                 tvUpdate.text = it.lastUpdate
                 tvFromSymbol.text = it.fromSymbol
                 tvToSymbol.text = it.toSymbol
+
+
                 Picasso.get().load(it.imageUrl).into(ivLogoCoin)
                 Log.v("Main Activity", it.imageUrl.toString())
 

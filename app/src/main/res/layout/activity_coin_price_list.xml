@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_background_color"
     tools:context=".presentation.CoinPriceListActivity">
-    <androidx.recyclerview.widget.RecyclerView
 
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCoinPriceList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:spanCount="3"
         tools:listitem="@layout/item_coin_ifo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

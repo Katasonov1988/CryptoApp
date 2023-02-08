@@ -11,14 +11,14 @@
     <dimen name="item_textview_tvsymbols_padding_top">4dp</dimen>
     <dimen name="item_textview_tvsymbols_padding_end">8dp</dimen>
     <dimen name="item_textview_tvsymbols_text_size">16sp</dimen>
-
+    <dimen name="padding">8dp</dimen>
     <dimen name="item_textview_tvprice_padding_top">4dp</dimen>
     <dimen name="item_textview_tvprice_padding_end">8dp</dimen>
     <dimen name="item_textview_tvprice_text_size">20sp</dimen>
 
     <dimen name="item_textview_tvlastupdate_margin_start">8dp</dimen>
     <dimen name="item_textview_tvlastupdate_padding">4dp</dimen>
-    <dimen name="item_textview_tvlastupdate_text_size">12sp</dimen>
+    <dimen name="item_textview_tv_lastupdate_text_size">12sp</dimen>
 
     <dimen name="my_toolbar_elevation">8dp</dimen>
 
@@ -38,5 +38,7 @@
     <dimen name="padding_start_of_tv_fragment_coin_detail">8dp</dimen>
     <dimen name="padding_end_of_tv_fragment_coin_detail">8dp</dimen>
     <dimen name="margin_start_of_tv_fragment_coin_detail">8dp</dimen>
+
+    <dimen name="textSize">16sp</dimen>
 
 </resources>

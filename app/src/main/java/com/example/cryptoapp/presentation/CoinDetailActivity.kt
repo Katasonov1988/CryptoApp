@@ -9,6 +9,17 @@ import com.example.cryptoapp.databinding.ActivityCoinDetailBinding
 
 class CoinDetailActivity : AppCompatActivity() {
 
+    companion object {
+        private const val EMPTY_SYMBOL = ""
+        private const val EXTRA_FROM_SYMBOL = "fSym"
+
+        fun newIntent(context: Context, fromSymbol: String): Intent {
+            val intent = Intent(context, CoinDetailActivity::class.java)
+            intent.putExtra(EXTRA_FROM_SYMBOL, fromSymbol)
+            return intent
+        }
+    }
+
     private val binding by lazy {
         ActivityCoinDetailBinding.inflate(layoutInflater)
     }
@@ -29,14 +40,4 @@ class CoinDetailActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-        private const val EMPTY_SYMBOL = ""
-        private const val EXTRA_FROM_SYMBOL = "fSym"
-
-        fun newIntent(context: Context, fromSymbol: String): Intent {
-            val intent = Intent(context, CoinDetailActivity::class.java)
-            intent.putExtra(EXTRA_FROM_SYMBOL, fromSymbol)
-            return intent
-        }
-    }
 }
